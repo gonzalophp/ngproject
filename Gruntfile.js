@@ -40,11 +40,17 @@ module.exports = function (grunt) {
                 opts: {stdio: 'inherit'}
             }, async);
     });
-    
+
     grunt.registerTask('dir_structure', 'Create directory structure' , function () {
         grunt.file.mkdir( 'dist' );
     });
-    
+
+    grunt.registerTask('dir_symlink', 'Link dist/lib directory with src/lib', function() {
+		var fs = require('fs');
+		fs.symlink('../dist/lib/', 'module1/lib');
+	});
+
+
     grunt.registerTask('uninstall', 'Remove installation' , function () {
         grunt.file.delete('dist');
         grunt.file.delete('node_modules');
@@ -53,7 +59,7 @@ module.exports = function (grunt) {
     
     grunt.registerTask('deploy', 'Deploy', function() {
         grunt.loadNpmTasks('grunt-contrib-copy');
-        grunt.task.run(['dir_structure','copy:production']);
+        grunt.task.run(['dir_structure','copy:production', 'dir_symlink']);
     });
     
     grunt.registerTask('test:unit', 'Karma unit tests', function() {

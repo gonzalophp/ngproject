@@ -1,10 +1,11 @@
 {
   "name": "ngproject",
-  "version": "0.0.0",
+  "version": "0.0.9",
   "description": "ng project",
-  "main": "Gruntfile.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "grunt install && ln -s `pwd` ../../ngproject"
   },
   "repository": {
     "type": "git",
@@ -13,10 +14,19 @@
   "keywords": [
     "angular"
   ],
-  "author": "gonzalophp",
+  "author": {
+    "name": "gonzalophp"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gonzalophp/ngproject/issues"
   },
-  "homepage": "https://github.com/gonzalophp/ngproject"
+  "homepage": "https://github.com/gonzalophp/ngproject",
+  "dependencies": {
+    "grunt": "^0.4.3"
+  },
+  "readme": "ngproject\n=========\n\nngproject\n",
+  "readmeFilename": "README.md",
+  "_id": "ngproject@0.0.9",
+  "_from": "ngproject@"
 }
