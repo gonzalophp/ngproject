@@ -21,17 +21,7 @@ module.exports = function (grunt) {
             }
         }
     });
-    
-    
-    
-    
-    grunt.registerTask('npm_modules_install', 'Install npm modules', function() {
-        var async = this.async(),
-            npm_modules_install = grunt.util.spawn({
-                cmd: 'npm', args: [ 'install', 'bower', 'karma', 'grunt-contrib-copy'],
-                opts: {stdio: 'inherit'}
-            }, async);
-    });
+
     
     grunt.registerTask('bower_update', 'Install bower components', function() {
         var async = this.async(),
@@ -71,5 +61,5 @@ module.exports = function (grunt) {
     });
     
     grunt.registerTask('update', ['bower_update']);
-    grunt.registerTask('install', ['npm_modules_install', 'update', 'deploy']);
+    grunt.registerTask('install', ['update', 'deploy']);
 };
