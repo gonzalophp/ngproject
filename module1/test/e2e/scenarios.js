@@ -5,7 +5,7 @@
 describe('my app', function() {
 
   beforeEach(function() {
-    browser().navigateTo('../../dist/app/index.html');
+    browser().navigateTo('../../src/index.html');
   });
 
 

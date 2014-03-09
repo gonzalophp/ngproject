@@ -13,9 +13,9 @@ module.exports = function (grunt) {
                     },
                     {
                         expand:true,
-                        cwd: 'src/',
+                        cwd: 'module1/src/',
                         src: ['**'],
-                        dest: 'dist/',
+                        dest: 'dist/module1',
                     }
                 ]
             }
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test:unit', 'Karma unit tests', function() {
        var async = this.async(),
             karma_test_runner = grunt.util.spawn({
-                cmd: 'node_modules/karma/bin/karma', args: [ 'start', 'config/karma.conf.js'],
+                cmd: 'node_modules/karma/bin/karma', args: [ 'start', 'module1/config/karma.conf.js'],
                 opts: {stdio: 'inherit'}
             }, async);
     });
