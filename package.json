@@ -1,0 +1,22 @@
+{
+  "name": "ngproject",
+  "version": "0.0.0",
+  "description": "ng project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gonzalophp/ngproject.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "gonzalophp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gonzalophp/ngproject/issues"
+  },
+  "homepage": "https://github.com/gonzalophp/ngproject"
+}
